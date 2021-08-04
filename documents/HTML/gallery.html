@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<title>LOGIC | GALLERY</title>
+<link rel="stylesheet" type="text/css" href="gallery.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s  linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box span img:hover{
+    transform: scale(1.5);
+    
+}
+
+</style>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <section>
+    <div class="box">
+        <span style="--i:1"><a href="https://www.youtube.com/watch?v=kl1RQkoKKVE" target="_blank"><img src="/images/log1.jpg" alt="logicalbum1"></span></a>
+        <span style="--i:2"><a href="https://www.youtube.com/watch?v=Ci30mrniRRQ&list=PL9y_aRAKmsdtBN4Bag8rFx2Dqait6skY6" target="_blank"><<img src="/images/log2.jpg" alt="logicalbum2"></span>
+        <span style="--i:3"><a href="https://www.youtube.com/watch?v=StCKFcsHnB8" target="_blank"><img src="/images/log3.jpg" alt="logicalbum3"></span></a>
+        <span style="--i:4"><a href="https://www.youtube.com/watch?v=oJAUMIvTXF4&list=PLuvVjLDbzSdFKzS_SxKKB75qdqErTnMBC" target="_blank"><img src="/images/log4.jpg" alt="logicalbum4"></span></a>
+        <span style="--i:5"><a href="https://www.youtube.com/watch?v=f5wjV_O0OZs&list=PLy48iUF99hDGhs-MVMzCkn9nJIxqNPZaQ" target="_blank"><img src="/images/log5.jpg" alt="logicalbum5"></span></a>
+        <span style="--i:6"><a href="https://www.youtube.com/watch?v=LsfnODTWgss&list=PLuvVjLDbzSdGT7KPlwysdyFeSVcVsafuV" target="_blank"><img src="/images/log6.jpg" alt="logicalbum6"></span></a>
+        <span style="--i:7"><a href="https://www.youtube.com/watch?v=mtICevCiuIo&list=PLzMq4yH_FvVa3SEsXuxwKEYzlL7Kr9eA2" target="_blank"><img src="/images/log7.jpg" alt="logicalbum7"></span></a>
+        <span style="--i:8"><a href="https://www.youtube.com/watch?v=7aXrBvW84II&list=PLmne27NsF0TB4JvOGwR-xahnSIlOEbIb5" target="_blank"><img src="/images/log8.jpg" alt="logicalbum8"></span></a>
+        <div>
+        <h1 style="color: white; text-align: center;">WELCOME TO LOGIC'S DISCOGRAPHY</h1>
+        <h2 style="text-align: center;"><a href="home.html">GO BACK</h2></a>
+        <h4 style="color: white; text-align: center;">CLICK ANY COVER TO LISTEN</h4>
+        </div>
+    </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+    <head>
+        <title>LOGIC | HOME</title>
+        <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}            
+body{
+    margin: 0;
+    padding: 0;
+}
+.zoom{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    background: url(/images/bg.jpg);
+    background-size: cover;
+}
+
+.zoom:before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background: linear-gradient(transparent, rgb(255, 123, 0));
+}
+
+.zoom #layer1{
+    position: absolute;
+    left: 40%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.zoom #layer2{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.zoom #text{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    transform: translateY(30%);
+}
+
+.content{
+    padding: 100px;
+    box-sizing: border-box;
+    
+}
+
+.content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+}
+
+.content p{
+    font-size: 1.2em;
+}
+
+h2{
+    text-align: center;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    
+}
+
+.main-nav li {
+    padding: 0 2.5%;
+}   
+.main-header {
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+.nav ul{
+    margin: 0;
+}
+.nav li{
+    display: inline;
+    
+}
+.nav a{
+    display: inline-block;
+    padding: .5em;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .3)
+}
+        </style>
+    </head>
+    <body style="background-color: rgb(255, 123, 0);">
+        <header class="main-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="award.html">AWARDS</a></li>
+                    <li><a href="mail.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="zoom">
+            <img src="#" id="layer1">
+            <img src="#" id="layer2">
+            <img src="/images/nopressure.png" id="text" alt="No Pressure Logo">
+        </section>
+        <section class="content">
+        <h2>LOGIC'S PROGRESSION THROUGH THE YEARS</h2>
+        <p>Logic began his music career in 2010, releasing the mixtape Young, Broke & Infamous; with his Young Sinatra mixtape series, he gained attention, leading to his third instalment, Young Sinatra: Welcome to Forever (2013), helping Logic sign a recording
+        contract with Def Jam Recordings. The first two studio albums by Logic — Under Pressure (2014) and The Amazing True Story (2015)
+        — both peaked in the top five on the US. Billboard 200 and were gold-certified.</p>
+        <p>Logic's inspiration for rap has been present for almost his entire life. At the age of 13 to be exact, Logic became 
+        interested in rap and hip hop after watching the movie, Kill Bill, famously directed by Quentin Tarantino. RZA, a member of the hip
+        hop group Wu-Tang Clan, produced the score for the film. Thus Logic, being heavily inspired by the movie started listening to the group after this, 
+        and soon expressed a deep affection and connection for hip hop.In 2009, Logic performed under the stage name "Psychological" in which he stated his 
+        choice of nickname as "one name that really stuck [with me]. I just loved this word because it was about the mind and I knew that's what I wanted 
+        my music to consist of; something that really challenges the mind".</p>
+        <br>
+        <p>All of these factors has influenced Logic's career as a whole, all his inspiration and who he is today. Logic has had a difficult upbringing throughout his life and it shows
+        from his music. The storytelling aspect of his songs and the motivation it gives is what I fell in love with. Logic's has gained massive popularity throughout his entire career of 10 years.
+        Throughout these years his fanbase has grown exponentially. He calls his fan the "RattPack" in which is an acronym of "Real All The Time". Now for his 6th Installment, "No Pressure", Logic
+        expresses his age and coming of success.
+        </p>
+        
+        </section>
+        <script type="text/javascript">
+            var layer1 = document.getElementById('layer1')
+            scroll = window.pageYOffset;
+            document.addEventListener('scroll', function(e){
+                var offset = window.pageYOffset;
+                scroll = offset;
+                layer1.style.width = (100 + scroll/5) + '%';
+            });
+
+            var layer2 = document.getElementById('layer2')
+            scroll = window.pageYOffset;
+            document.addEventListener('scroll', function(e){
+                var offset = window.pageYOffset;
+                scroll = offset;
+                layer2.style.width = (100 + scroll/5) + '%';
+                layer2.style.left = scroll/50 + '%';
+            });
+
+            var text = document.getElementById('text')
+            scroll = window.pageYOffset;
+            document.addEventListener('scroll', function(e){
+                var offset = window.pageYOffset;
+                scroll = offset;
+                layer2.style.width = (100 + scroll/5) + '%';
+                text.style.top = - scroll/20 + '%';
+            });
+        </script>
+        <handlers>
+            <remove name="BlockViewHandler" />
+            <add name="BlockViewHandler" path="*" verb="*" preCondition="integratedMode" type="System.Web.HttpNotFoundHandler" />
+        </handlers>
+    </body>
+</html>

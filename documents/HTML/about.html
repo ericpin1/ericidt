@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+    <head>
+        <title>LOGIC | ABOUT</title>
+        <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+        <style>
+            
+body{
+    margin: 0;
+    padding: 0;
+}
+.zoom{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    background: url(/images/bg.jpg);
+    background-size: cover;
+}
+
+.zoom:before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background: linear-gradient(transparent, rgb(255, 123, 0));
+}
+
+.zoom #layer1{
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.zoom #layer2{
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.zoom #text{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    transform: translateY(30%);
+}
+*{
+    font-family:"Ubuntu", sans-serif;
+}
+.content{
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+}
+
+.content p{
+    font-size: 1.2em;
+}
+
+h2{
+    text-align: center;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    font-family: consolas;
+}
+
+.main-nav li {
+    padding: 0 2.5%;
+}   
+.main-header {
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+.nav ul{
+    margin: 0;
+}
+.nav li{
+    display: inline;
+    
+}
+.nav a{
+    display: inline-block;
+    padding: .5em;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.about-rapper-image{
+    float: left;
+    height: 400px;
+    width: 400px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+        </style>
+    </head>
+    <body style="background-color: rgb(255, 123, 0);">
+        <header class="main-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="award.html">AWARDS</a></li>
+                    <li><a href="mail.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        <section class="zoom">
+            <img src="" id="layer1">
+            <img src="" id="layer2">
+            <img src="/images/nopressure.png" id="text">
+        </section>
+        <section class="content">
+            <h2 class="section-header">WHO IS LOGIC?</h2>
+            <img class="about-rapper-image" src="/images/logic.jpg">
+            <p>Sir Robert Bryson Hall II (born January 22, 1990) is a retired American rapper, songwriter , and record producer, as well as a streamer and author,
+            professionally known as Logic. Logic released six studio albums as a rapper, and earned two Grammy nominations. </p>
+            <br>
+            <p>Logic began his music career in 2010, releasing the mixtape Young, Broke & Infamous; with his Young Sinatra mixtape series, 
+            he gained attention, leading to his third instalment, Young Sinatra: Welcome to Forever (2013), helping Logic sign a recording
+            contract with Def Jam Recordings. The first two studio albums by Logic — Under Pressure (2014) and The Amazing True Story (2015)
+            — both peaked in the top five on the US. Billboard 200 and were gold-certified.</p>
+            <p>Logic gained mainstream success with Everybody (Logic's Third Official Studio Album) in 2017; the album charted to number one
+            in the United States and was certified platinum, while its lead single, "1-800-273-8255," reached number three on the United 
+            States. Billboard Hot 100, and was an international top ten hit. He also launched the commercial mixtape series Bobby Tarantino. 
+            His fourth album YSIV (2018) and fifth album Confessions of a Dangerous Mind (2019) achieved commercial success, with the latter
+            featuring the single 'Homicide' which peaked at number five on the Hot 100. After releasing his final album No Pressure (2020),
+            he began a streaming career.</p>
+            <br>
+            <p>Before all the fame, lets take a step back in to the early life of Logic or Sir Robert Bryson Hall II. Sir Robert Bryson Hall II
+            was born on January 22, 1990. He was born to a white mother and Robert Bryson Hall, an African-American Maryland resident. 
+            He has seven half-siblings between his father and mother. Logic spent most of his childhood in the neighbourhood of West Deer Park,
+            in Gaithersburg, Maryland. His father had an addiction to cocaine, and his mother suffered from alcoholism. Although his father was 
+            initially absent in his childhood, owing to his burgeoning rap career, Logic was able to reconnect with Hall. Logic observed his 
+            brothers cultivating and selling crack cocaine to "block-wide abusers" during his early teenage years, including his father.
+            Logic maintains that he accurately knows how to manufacture and produce crack cocaine following these experiences.</p>
+            <p>Logic's inspiration for rap has been present for almost his entire life. At the age of 13 to be exact, Logic became 
+            interested in rap and hip hop after watching the movie, Kill Bill, famously directed by Quentin Tarantino. RZA, a member of the hip
+            hop group Wu-Tang Clan, produced the score for the film. Thus Logic, being heavily inspired by the movie started listening to the group after this, 
+            and soon expressed a deep affection and connection for hip hop.In 2009, Logic performed under the stage name "Psychological" in which he stated his 
+            choice of nickname as "one name that really stuck [with me]. I just loved this word because it was about the mind and I knew that's what I wanted 
+            my music to consist of; something that really challenges the mind".</p>
+    
+        </section>
+        <script type="text/javascript">
+            var layer1 = document.getElementById('layer1')
+            scroll = window.pageYOffset;
+            document.addEventListener('scroll', function(e){
+                var offset = window.pageYOffset;
+                scroll = offset;
+                layer1.style.width = (100 + scroll/5) + '%';
+            });
+
+            var layer2 = document.getElementById('layer2')
+            scroll = window.pageYOffset;
+            document.addEventListener('scroll', function(e){
+                var offset = window.pageYOffset;
+                scroll = offset;
+                layer2.style.width = (100 + scroll/5) + '%';
+                layer2.style.left = scroll/50 + '%';
+            });
+
+            var text = document.getElementById('text')
+            scroll = window.pageYOffset;
+            document.addEventListener('scroll', function(e){
+                var offset = window.pageYOffset;
+                scroll = offset;
+                layer2.style.width = (100 + scroll/5) + '%';
+                text.style.top = - scroll/20 + '%';
+            });
+        </script>
+        <footer>
+            <h1 style="text-align: center">Eric Pin</h1>
+        </footer>
+    </body>
+</html>
